@@ -1,0 +1,55 @@
+﻿@model BeestjeOpJeFeestje.Core.Booking
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Beestje op een Feestje</h1>
+    <p class="lead">
+        Welkom op Beestje op een feestje (BOEF). Dit is een website waarop je beestjes en accessoires kunt beheren. Daarnaast kan je via een boekingsproces een
+        beestje reserveren.
+    </p>
+</div>
+@using (Html.BeginForm("SaveBooking", "Home",
+                    FormMethod.Post,
+                    new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", placeholder = "dd-mm-jjjj" } })
+                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <p id="error">@ViewBag.ErrorMessage</p>
+    <div class="form-actions no-color">
+        <input type="submit" value="Boeken" class="btn btn-default" />
+    </div>
+
+    <div class="image">
+        <img class="img-responsive img-full" src="/Images/field.png" alt="">
+    </div>
+}
+
+<style>
+    .form-group {
+        text-align: left;
+    }
+
+    .image {
+        margin-left: 60%;
+        text-align: right;
+        width: 500px;
+        height: 400px;
+    }
+
+    #error{
+        color: red;
+    }
+</style>

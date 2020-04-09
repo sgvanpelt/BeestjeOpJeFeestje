@@ -1,0 +1,216 @@
+﻿@model BeestjeOpJeFeestje.Models.BookingViewModel
+
+@{
+    ViewBag.Title = "Gegevens";
+}
+
+@using (Html.BeginForm("CheckBooking", "Bookings", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <div class="progressbar">
+            <ul>
+                <li class="active">Beestjes kiezen</li>
+                <li class="active">Accessoires kiezen</li>
+                <li class="active">Contact gegevens</li>
+                <li>Bevestiging</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div id="first">
+            <div id="background">
+                <h5>Stap 3 - Vul je contact gegevens in</h5>
+            </div>
+            <div id="inner">
+
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        <p id="Labels"> Voornaam</p>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Customer.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Customer.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p id="Labels"> Tussenvoegsels</p>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Customer.Insertion, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Customer.Insertion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p id="Labels"> Achternaam</p>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Customer.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Customer.LastName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p id="Labels"> Adres</p>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Customer.Adres, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Customer.Adres, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p id="Labels"> Email</p>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Customer.Email, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Customer.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p id="Labels"> Telefoonnummer</p>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Customer.Phonenumber, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Customer.Phonenumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    @Html.HiddenFor(model => model.Booking.Id)
+                    @Html.HiddenFor(model => model.Booking.Date)
+                    @Html.HiddenFor(model => model.Booking.Payment)
+                    @Html.HiddenFor(model => model.Booking.Animals)
+                    @Html.HiddenFor(model => model.Customer.Id)
+                    @Html.HiddenFor(model => model.Customer.Name)
+                    @Html.HiddenFor(model => model.Customer.Insertion)
+                    @Html.HiddenFor(model => model.Customer.LastName)
+                    @Html.HiddenFor(model => model.Customer.Email)
+                    @Html.HiddenFor(model => model.Customer.Adres)
+                    @Html.HiddenFor(model => model.Customer.Phonenumber)
+                </div>
+                <p id="error">@ViewBag.ErrorMessage</p>
+                <input type="submit" value="Ga door naar stap 4" class="btn btn-default" />
+            </div>
+        </div>
+        <div id="second">
+            <div id="background">
+                <h5>Boeking</h5>
+            </div>
+            <div id="inner">
+                <h6>
+                    <span>
+                        Datum: @Model.Booking.Date.ToShortDateString()
+                    </span>
+                </h6>
+                <h6>@Model.Booking.Id</h6>
+                <h6>Beestjes</h6>
+                @for (int i = 0; i < Model.Booking.Animals.Count(); i++)
+                {
+                    <img class="card-img-top" src="@Url.Content(@Model.Booking.Animals.ElementAt(i).Image)" height="50" />
+                }
+                <h6>Accesoires</h6>
+                <ul>
+                    @foreach (var acc in Model.Booking.Accessories)
+                    {
+                        <li>@acc.Name</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+}
+
+<style>
+    .container-fluid {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #first {
+        width: 65%;
+        float: left;
+        border: 0.5px solid black;
+    }
+
+    #inner {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+
+    #Labels {
+        padding-left: 16px;
+    }
+
+    #second {
+        width: 30%;
+        border: 0.5px solid black;
+        float: right;
+    }
+
+    #background {
+        background: lightgray;
+    }
+
+    #error{
+        color: red;
+    }
+
+    .progressbar {
+        counter-reset: step;
+    }
+
+        .progressbar li {
+            list-style-type: none;
+            width: 25%;
+            float: left;
+            font-size: 12px;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            color: #7d7d7d;
+        }
+
+            .progressbar li:before {
+                width: 30px;
+                height: 30px;
+                content: counter(step);
+                counter-increment: step;
+                line-height: 30px;
+                border: 2px solid #7d7d7d;
+                display: block;
+                text-align: center;
+                margin: 0 auto 10px auto;
+                border-radius: 50%;
+                background-color: white;
+            }
+
+            .progressbar li:after {
+                width: 100%;
+                height: 2px;
+                content: '';
+                position: absolute;
+                background-color: #7d7d7d;
+                top: 15px;
+                left: -50%;
+                z-index: -1;
+            }
+
+            .progressbar li:first-child:after {
+                content: none;
+            }
+
+            .progressbar li.active {
+                color: green;
+            }
+
+                .progressbar li.active:before {
+                    border-color: #55b776;
+                }
+
+                .progressbar li.active + li:after {
+                    background-color: #55b776;
+                }
+</style>
+

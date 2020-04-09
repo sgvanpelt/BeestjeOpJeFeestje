@@ -1,0 +1,5 @@
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Core\bin\Debug\BeestjeOpJeFeestje.Core.dll
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Core\bin\Debug\BeestjeOpJeFeestje.Core.pdb
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Core\obj\Debug\BeestjeOpJeFeestje.Core.dll
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Core\obj\Debug\BeestjeOpJeFeestje.Core.pdb
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Core\obj\Debug\BeestjeOpJeFeestje.Core.csprojAssemblyReference.cache

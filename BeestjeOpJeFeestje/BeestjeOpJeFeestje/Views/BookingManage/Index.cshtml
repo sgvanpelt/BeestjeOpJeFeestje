@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BeestjeOpJeFeestje.Core.Booking>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Overzicht</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Payment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsConfirmed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsConfirmed)
+        </td>
+        <td>
+            @Html.ActionLink("Informatie", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Verwijderen", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

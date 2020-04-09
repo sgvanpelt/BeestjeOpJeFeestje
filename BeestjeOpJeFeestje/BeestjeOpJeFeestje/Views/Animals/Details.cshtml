@@ -1,0 +1,71 @@
+﻿@model BeestjeOpJeFeestje.Core.Animal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Informatie</h2>
+
+<div>
+    <h4>Beestje</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories)
+        </dt>
+
+        <dd>
+            @foreach (var accessory in Model.Accessories)
+            {
+                <span>@accessory.Name</span>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bookings)
+        </dt>
+
+        <dd>
+            @foreach (var booking in Model.Bookings.Where(a => a.IsConfirmed != null))
+            {
+                <span>@booking.Id</span>
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Terug naar overzicht", "Index")
+</p>

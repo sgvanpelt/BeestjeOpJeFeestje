@@ -1,0 +1,13 @@
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\obj\Debug\BeestjeOpJeFeestje.Infrastructure.csprojAssemblyReference.cache
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\bin\Debug\BeestjeOpJeFeestje.Infrastructure.dll.config
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\bin\Debug\BeestjeOpJeFeestje.Infrastructure.dll
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\bin\Debug\BeestjeOpJeFeestje.Infrastructure.pdb
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\bin\Debug\BeestjeOpJeFeestje.Core.dll
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\bin\Debug\BeestjeOpJeFeestje.Core.pdb
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\obj\Debug\BeestjeOpJeFeestje.Infrastructure.csproj.CopyComplete
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\obj\Debug\BeestjeOpJeFeestje.Infrastructure.dll
+C:\Users\Bas\Documents\GitHub\eindopdracht-prog6-1920-bas_jeroen\BeestjeOpJeFeestje\BeestjeOpJeFeestje.Infrastructure\obj\Debug\BeestjeOpJeFeestje.Infrastructure.pdb

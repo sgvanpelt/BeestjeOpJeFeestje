@@ -1,0 +1,103 @@
+﻿@model BeestjeOpJeFeestje.Core.Booking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Overzicht</h2>
+
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsConfirmed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsConfirmed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Animals)
+        </dt>
+
+        <dd>
+            @foreach (var animal in Model.Animals)
+            {
+                <span>@animal.Name</span>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessories)
+        </dt>
+
+        <dd>
+            @foreach (var accessoires in Model.Accessories)
+            {
+                <span>@accessoires.Name</span>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.Name)
+        </dt>
+
+        <dd>
+            <span>@Model.customer.Name @Model.customer.Insertion @Model.customer.LastName</span>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.Adres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer.Adres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.Phonenumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer.Phonenumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Terug naar overzicht", "Index")
+</p>
